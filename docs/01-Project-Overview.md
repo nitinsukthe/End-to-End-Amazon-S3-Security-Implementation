@@ -1,32 +1,51 @@
-# Project Overview: End-to-End Amazon S3 Security Implementation
+# Project Overview
 
-## 1. Introduction
-This project demonstrates a secure cloud storage implementation using Amazon S3 with a focus on data protection, encryption, access control, and monitoring. The objective is to design and implement a security-hardened S3 environment aligned with AWS best practices.
+## Project Title
 
-Amazon S3 is widely used for scalable object storage, but misconfigurations can lead to data breaches. This lab focuses on eliminating common risks such as public exposure, weak encryption, and insufficient access control.
+End-to-End Amazon S3 Security Implementation
 
----
+## Introduction
 
-## 2. Objectives
-- Secure S3 bucket from public exposure
-- Implement encryption using AWS Key Management Service (KMS)
-- Enable versioning for data recovery and integrity
-- Apply least-privilege bucket policies
-- Enable access logging for audit and monitoring
+Amazon Simple Storage Service (S3) is one of the most widely used cloud storage services. Improperly configured S3 buckets are a common cause of cloud security incidents and data exposure.
+
+This project demonstrates the implementation of multiple security controls to protect data stored within Amazon S3. The objective was to create a secure storage environment following AWS security best practices while maintaining data availability, integrity, and auditability.
 
 ---
 
-## 3. Security Focus Areas
-- Data Confidentiality (Encryption at rest)
-- Data Integrity (Versioning)
-- Access Control (Bucket Policy)
-- Audit & Monitoring (S3 Access Logs)
+## Objectives
+
+- Create a secure Amazon S3 bucket
+- Prevent unauthorized public access
+- Implement data encryption using AWS KMS
+- Configure bucket policies for secure access
+- Enable object versioning for data recovery
+- Configure access logging for monitoring and auditing
+- Demonstrate recovery capabilities using S3 versioning
 
 ---
 
-## 4. Outcome
-A fully secured S3 bucket configured with:
-- Blocked public access
-- KMS-based encryption
-- Versioning enabled
-- Logging enabled for forensic visibility
+## Technologies Used
+
+- Amazon S3
+- AWS Key Management Service (KMS)
+- AWS IAM
+- AWS Management Console
+
+---
+
+## Security Controls Implemented
+
+| Control | Status |
+|----------|---------|
+| Block Public Access | Implemented |
+| S3 Versioning | Implemented |
+| AWS KMS Encryption | Implemented |
+| Bucket Policy | Implemented |
+| Access Logging | Implemented |
+| Data Recovery Validation | Implemented |
+
+---
+
+## Project Outcome
+
+A secure Amazon S3 environment was successfully deployed with encryption, access controls, logging, and recovery mechanisms to improve overall cloud security posture.
