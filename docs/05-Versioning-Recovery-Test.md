@@ -1,38 +1,68 @@
-# Versioning & Data Recovery Test
+# Versioning Recovery Test
 
-## 1. Overview
-S3 Versioning is used to protect against accidental deletion or overwriting of objects by maintaining historical versions.
+## Objective
 
----
-
-## 2. Configuration Steps
-- Navigate to S3 bucket properties
-- Enable "Bucket Versioning"
-- Confirm activation
+Validate Amazon S3 Versioning functionality and demonstrate data recovery capabilities.
 
 ---
 
-## 3. Test Scenario
+## Test Scenario
 
-### Step 1: Upload File
-- Upload test file to bucket
+### Version 1
 
-### Step 2: Modify File
-- Upload modified version with same filename
+Uploaded:
 
-### Step 3: Delete File
-- Delete object from bucket
+confidential-data.txt
 
----
-
-## 4. Recovery Process
-- Enable "Show Versions"
-- Identify previous object versions
-- Restore required version
+Version ID generated automatically by Amazon S3.
 
 ---
 
-## 5. Security Impact
-- Prevents permanent data loss
-- Supports ransomware recovery scenarios
-- Maintains data integrity
+### Version 2
+
+Modified file contents.
+
+Re-uploaded file to the bucket.
+
+Amazon S3 generated a second Version ID.
+
+---
+
+## Verification
+
+Enabled:
+
+Show Versions
+
+Observed:
+
+- Original object version
+- Updated object version
+
+Both versions remained available.
+
+---
+
+## Security Benefits
+
+### Accidental Deletion Recovery
+
+Previous versions remain accessible.
+
+### Ransomware Protection
+
+Encrypted or modified files can be restored.
+
+### Change Tracking
+
+Provides object history.
+
+### Data Integrity
+
+Protects against unintended modifications.
+
+---
+
+## Test Result
+
+Versioning successfully preserved multiple object versions and validated recovery functionality.
