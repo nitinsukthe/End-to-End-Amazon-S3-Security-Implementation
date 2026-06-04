@@ -9,15 +9,22 @@ Bucket policies define access control rules for Amazon S3 resources. This projec
 
 ```json
 {
-  "Version": "2012-10-17",
-  "Statement": [
-    {
-      "Effect": "Allow",
-      "Principal": {
-        "AWS": "arn:aws:iam::123456789012:user/username"
-      },
-      "Action": "s3:GetObject",
-      "Resource": "arn:aws:s3:::my-secure-bucket/*"
-    }
-  ]
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "DenyInsecureTransport",
+            "Effect": "Deny",
+            "Principal": "*",
+            "Action": "s3:*",
+            "Resource": [
+                "arn:aws:s3:::nitin-cloud-security-s3-lab",
+                "arn:aws:s3:::nitin-cloud-security-s3-lab/*"
+            ],
+            "Condition": {
+                "Bool": {
+                    "aws:SecureTransport": "false"
+                }
+            }
+        }
+    ]
 }
