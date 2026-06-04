@@ -1,34 +1,52 @@
-# AWS KMS Implementation for S3 Encryption
+# AWS KMS Implementation
 
-## 1. Overview
-AWS Key Management Service (KMS) is used to secure S3 objects using server-side encryption (SSE-KMS). This ensures that data is encrypted at rest and controlled using centralized key policies.
+## Objective
 
----
-
-## 2. Implementation Steps
-
-### Step 1: Create KMS Key
-- Navigate to AWS KMS console
-- Create a Symmetric Encryption Key
-- Define administrative and usage permissions
-
-### Step 2: Configure S3 Bucket Encryption
-- Open S3 bucket settings
-- Enable Default Encryption
-- Select SSE-KMS
-- Choose the created KMS key
+Protect sensitive data stored in Amazon S3 using server-side encryption with AWS Key Management Service (KMS).
 
 ---
 
-## 3. Security Benefits
-- Centralized key control
-- Audit trail via AWS CloudTrail
-- Fine-grained access control using IAM policies
-- Automatic encryption of all uploaded objects
+## Implementation Steps
+
+1. Created a customer-managed KMS key
+2. Assigned alias:
+   s3-security-key
+3. Enabled Default Encryption on the S3 bucket
+4. Selected AWS KMS (SSE-KMS)
+5. Applied encryption configuration
 
 ---
 
-## 4. Security Validation
-- Uploaded objects are encrypted at rest
-- Only authorized IAM roles can decrypt data
-- Unauthorized access is denied at KMS layer
+## Encryption Model
+
+S3 Object
+    ↓
+AWS KMS Key
+    ↓
+Encrypted Storage
+
+---
+
+## Security Benefits
+
+### Data Confidentiality
+
+Protects stored data from unauthorized access.
+
+### Centralized Key Management
+
+Allows encryption key monitoring and management.
+
+### Compliance Support
+
+Supports common cloud security and compliance requirements.
+
+### Auditability
+
+KMS usage can be monitored through AWS logging services.
+
+---
+
+## Result
+
+All newly uploaded objects are encrypted automatically using AWS KMS.
