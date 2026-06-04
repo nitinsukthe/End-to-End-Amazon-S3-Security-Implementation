@@ -19,7 +19,7 @@ Amazon S3 is widely used for scalable object storage, but misconfigurations can 
 ## 3. Security Focus Areas
 - Data Confidentiality (Encryption at rest)
 - Data Integrity (Versioning)
-- Access Control (IAM + Bucket Policy)
+- Access Control (Bucket Policy)
 - Audit & Monitoring (S3 Access Logs)
 
 ---
@@ -29,5 +29,4 @@ A fully secured S3 bucket configured with:
 - Blocked public access
 - KMS-based encryption
 - Versioning enabled
-- Controlled IAM-based access
 - Logging enabled for forensic visibility
