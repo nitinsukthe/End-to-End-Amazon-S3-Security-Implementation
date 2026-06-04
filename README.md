@@ -233,32 +233,6 @@ Multiple object versions were successfully retained and recoverable.
 
 ---
 
-# Project Structure
-
-```text
-AWS-S3-Data-Protection-Lab/
-│
-├── README.md
-│
-├── docs/
-│   ├── Project-Overview.md
-│   ├── Security-Architecture.md
-│   ├── AWS-KMS-Implementation.md
-│   ├── Bucket-Policy-Analysis.md
-│   ├── Versioning-Recovery-Test.md
-│   └── Security-Best-Practices.md
-│
-├── screenshots/
-│
-├── policies/
-│   └── bucket-policy.json
-│
-└── report/
-    └── AWS-S3-Security-Project-Report.pdf
-```
-
----
-
 # Documentation
 
 ## Technical Documentation
@@ -341,8 +315,3 @@ Nitin Sukthe
 
 Cloud Security | AWS Security | SOC Analyst | Cybersecurity
 
----
-
-# Disclaimer
-
-This project was performed in a controlled AWS environment for educational, research, and portfolio development purposes. No production systems or third-party environments were targeted or affected.
