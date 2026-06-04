@@ -1,4 +1,3 @@
-```md
 # Versioning & Data Recovery Test
 
 ## 1. Overview
